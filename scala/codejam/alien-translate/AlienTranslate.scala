@@ -1,0 +1,4 @@
+object AlienTranslate extends App
+{
+
+}
