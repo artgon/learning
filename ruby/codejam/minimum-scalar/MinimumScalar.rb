@@ -1,7 +1,3 @@
-def removeObjectFromArray( array, object )
-  array.slice!(array.index(object))
-end
-
 File.open(ARGV[0], 'r') do |file|
   testCases = file.readline 
 
@@ -19,12 +15,13 @@ File.open(ARGV[0], 'r') do |file|
 
       sum += min.to_i * max.to_i
 
-      removeObjectFromArray(vector1, min)
-      removeObjectFromArray(vector2, max)
+      vector1.slice!(vector1.index(min))
+      vector2.slice!(vector2.index(max))
     end
 
     puts "Case ##{j}: #{sum}"
   end
 end
+
 
 
